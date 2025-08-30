@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #f7f7f7;
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    color: #222;
+    min-height: 100vh;
+    padding-top: 140px; 
+}
+
+.card-stack {
+    position: relative;
+    width: 340px;
+    max-width: 90vw;
+    margin: 60px auto 0 auto;
+    height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 220px;
+    max-width: 90vw;
+    min-height: 320px;
+    border-radius: 14px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+    background: #fff;
+    transition: box-shadow 0.2s;
+    border: 2px solid #c4c1c1;
+}
+
+.card-back {
+    z-index: 1;
+    transform: rotate(-18deg) scale(0.93) translateY(32px) translateX(-32px);
+    opacity: 1;
+    background: linear-gradient(135deg, #d1c4e9 60%, #fff 100%);
+    box-shadow: 0 16px 40px rgba(80, 40, 160, 0.18), 0 2px 8px rgba(0,0,0,0.10);
+    border: 2px solid #b39ddb;
+}
+
+.card-mid {
+    z-index: 2;
+    transform: rotate(10deg) scale(0.96) translateY(16px) translateX(16px);
+    opacity: 1;
+    background: linear-gradient(135deg, #fffde7 60%, #fff 100%);
+    box-shadow: 0 12px 32px rgba(255, 193, 7, 0.13), 0 2px 8px rgba(0,0,0,0.08);
+    border: 2px solid #ffe082;
+}
+
+.card-front {
+    z-index: 3;
+    box-shadow: 0 12px 36px rgba(0,0,0,0.13);
+    transform: rotate(-4deg);
+    background: #fff;
+    padding: 24px 16px;
+    text-align: center;
+    border: 2px solid #fff;
+}
+
+h1 {
+    font-size: 2.2rem;
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.3rem;
+    margin-bottom: 18px;
+    font-weight: 500;
+    color: #555;
+}
+
+.intro {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+.twins-image {
+    width: 100%;
+    max-width: 120px;
+    border-radius: 8px;
+    margin: 0 auto 18px auto;
+    display: block;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+@media (max-width: 700px) {
+    .card-stack {
+        height: 180px;
+        width: 98vw;
+    }
+    .card {
+        min-height: 180px;
+        width: 98vw;
+        padding: 0;
+    }
+    .card-front {
+        padding: 10px 4px;
+    }
+    h1 {
+        font-size: 1.1rem;
+    }
+    h2 {
+        font-size: 0.9rem;
+    }
+    .intro {
+        font-size: 0.9rem;
+    }
+    .twins-image {
+        max-width: 70px;
+    }
+}
